@@ -20,7 +20,11 @@
     "build": "rollup -c rollup.config.js"
   },
   "keywords": [
-    "html elements"
+    "curved html elements",
+    "elements along ellipse",
+    "align elements curve",
+    "curve elements",
+    "ellipse"
   ],
   "devDependencies": {
     "@babel/core": "^7.9.6",
