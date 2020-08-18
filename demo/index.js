@@ -56,9 +56,9 @@ optionsForm.addEventListener("change", e => {
 
 function generateDemoCode(options) {
     const demoCode =
-        `const elm = document.getElementById("on-arc");
+        `const elm = document.getElementById("demo");
 const options = ${JSON.stringify(options, null, 4)}
-const htmlArc = new OnArc(elm, options)`;
+const htmlArc = new EllipseElements(elm, options)`;
 
     const codeElm = document.getElementById("demo-code");
     codeElm.innerText = demoCode;
