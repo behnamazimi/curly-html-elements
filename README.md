@@ -25,7 +25,7 @@ Using unpkg CDN
 ### Usage
 After importing `ellipsis-html` to your project, you can call it like this,
 ```javascript
-const myEllipsis = new EllipsisHTML(htmlElement, options)
+const myEllipse = new EllipsisHTML(htmlElement, options)
 ``` 
 
 There are two arguments that you should pass to the `EllipsisHTML`:
@@ -42,7 +42,7 @@ rotate | [0, 360] | 0 | Use this property to rotate ellipse. It could be a numbe
 reflection | [-1, +1] | 1 | Use this to mirroring the ellipse. its standard value is a number in range of [-1,+1] but you can set any numbers. for example, value 2 means two times height for the ellipse.   
 
 #### Render with new options
-To update initial options you can use `.update(newOptions)` api. this method merges new options with the previous object 
+To update initial options you can use `.update(newOptions)` API. this method merges new options with the previous object 
 and rerender the ellipse.   
 
 ### Example
@@ -55,10 +55,10 @@ const options = {
     reflection: 1, // 0, 1, only in compact layout
     reverse: false
 }
-const EllipsisHTML = new EllipsisHTML(elm, options)
+const myEllipse = new EllipsisHTML(elm, options)
 
 // to update options and rerender the ellipse
-EllipsisHTML.update({size: 1})
+myEllipse.update({size: 1})
 ``` 
 
 ### Sample Layouts
