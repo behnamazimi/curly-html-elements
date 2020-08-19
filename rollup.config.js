@@ -18,4 +18,18 @@ export default [
             }),
         ]
     },
+    {
+        input: 'src/ellipse-elements.js',
+        output: {
+            file: pkg.main,
+            format: 'cjs',
+        }
+    },
+    {
+        input: 'src/ellipse-elements.js',
+        output: {
+            file: pkg.module,
+            format: 'es',
+        }
+    }
 ];
