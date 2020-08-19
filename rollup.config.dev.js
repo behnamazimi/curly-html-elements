@@ -1,4 +1,3 @@
-import {terser} from 'rollup-plugin-terser';
 import copy from 'rollup-plugin-cpy'
 import browsersync from 'rollup-plugin-browsersync'
 import pkg from './package.json';
