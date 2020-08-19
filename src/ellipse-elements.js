@@ -9,7 +9,7 @@ export default class EllipseElements {
             type: "compact", // compact, equal
             size: .5, // 0, 1
             reflection: 1, // 0, 1
-            rotate: 5, // 0, 360
+            rotateY: 5, // 0, 360
             reverse: false,
         }
 
@@ -67,14 +67,14 @@ export default class EllipseElements {
         const options = this._options
 
         const size = 2 * options.size;
-        const rotate = (Math.PI / 2 * (options.rotate * 4 / 360)) + Math.PI;
+        const rotateY = (Math.PI / 2 * (options.rotateY * 4 / 360)) + Math.PI;
 
         // reflection arc
         r2 = r2 * options.reflection;
 
         let coordinates = []
         for (let i = 0; i < n; i++) {
-            const t = (Math.PI * i / n * size) + rotate;
+            const t = (Math.PI * i / n * size) + rotateY;
             let nx = centerX + r1 * Math.cos(t);
             let ny = centerY + r2 * Math.sin(t);
             coordinates.push([nx, ny])
@@ -83,9 +83,9 @@ export default class EllipseElements {
         return coordinates
     }
 
-    computeDpt(r1, r2, theta, rotate = 0) {
-        const dpt_sin = Math.pow(r1 * Math.sin(theta + rotate), 2)
-        const dpt_cos = Math.pow(r2 * Math.cos(theta + rotate), 2)
+    computeDpt(r1, r2, theta, rotateY = 0) {
+        const dpt_sin = Math.pow(r1 * Math.sin(theta + rotateY), 2)
+        const dpt_cos = Math.pow(r2 * Math.cos(theta + rotateY), 2)
         return Math.sqrt(dpt_sin + dpt_cos)
     }
 
@@ -117,19 +117,19 @@ export default class EllipseElements {
         let run = 0;
         theta = 0;
 
-        const rotate = (Math.PI / 2 * (options.rotate * 4 / 360));
+        const rotateY = (Math.PI / 2 * (options.rotateY * 4 / 360));
         for (let i = 0; i < numIntegrals; i++) {
             theta += accuracy;
             let subIntegral = n * run / circ;
             if (subIntegral >= nextPoint) {
-                let x = Math.floor((centerX - r1 * Math.cos(theta + rotate)) * 100) / 100;
-                let y = Math.floor((centerY + r2 * Math.sin(theta + rotate) * reflection) * 100) / 100;
+                let x = Math.floor((centerX - r1 * Math.cos(theta + rotateY)) * 100) / 100;
+                let y = Math.floor((centerY + r2 * Math.sin(theta + rotateY) * reflection) * 100) / 100;
                 coordinates.push([x, y]);
 
                 nextPoint++;
             }
 
-            run += this.computeDpt(r1, r2, theta, rotate);
+            run += this.computeDpt(r1, r2, theta, rotateY);
         }
 
         return coordinates;
