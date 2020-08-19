@@ -4,15 +4,15 @@ import pkg from './package.json';
 
 export default [
     {
-        input: 'src/ellipse-elements.js',
+        input: 'src/html-ellipsis.js',
         output: {
-            name: "EllipseElements",
+            name: "HTMLEllipsis",
             file: pkg.browser,
             format: 'umd',
         },
         plugins: [
             copy({
-                files: ['lib/ellipse-elements.min.js'],
+                files: ['lib/html-ellipsis.min.js'],
                 dest: 'demo',
             }),
             browsersync({
