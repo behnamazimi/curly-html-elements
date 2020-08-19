@@ -1,4 +1,4 @@
-# Ellipse Elements
+# Ellipse HTML Elements
 
 Mini tool to align HTML elements along an ellipse or a part of an ellipse.So you can arrange your HTML items along an
  ellipse easily without using canvas or any complex math functions. It's easy to use and high performance.
