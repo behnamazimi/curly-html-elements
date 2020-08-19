@@ -1,19 +1,19 @@
 {
-  "name": "html-ellipsis",
+  "name": "ellipsis-html",
   "version": "0.0.3",
   "description": "Mini tool to align HTML elements along an ellipse or a part of an ellipse",
-  "main": "lib/html-ellipsis.cjs.js",
-  "module": "lib/html-ellipsis.esm.js",
-  "browser": "lib/html-ellipsis.min.js",
+  "main": "lib/ellipsis-html.cjs.js",
+  "module": "lib/ellipsis-html.esm.js",
+  "browser": "lib/ellipsis-html.min.js",
   "license": "MIT",
   "author": "Behnam Azimi",
-  "homepage": "https://github.com/behnamazimi/html-ellipsis",
+  "homepage": "https://github.com/behnamazimi/ellipsis-html",
   "repository": {
     "type": "git",
-    "url": "https://github.com/behnamazimi/html-ellipsis.git"
+    "url": "https://github.com/behnamazimi/ellipsis-html.git"
   },
   "bugs": {
-    "url": "https://github.com/behnamazimi/html-ellipsis/issues"
+    "url": "https://github.com/behnamazimi/ellipsis-html/issues"
   },
   "scripts": {
     "dev": "rollup -c rollup.config.dev.js -w",

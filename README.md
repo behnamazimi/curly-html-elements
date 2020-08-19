@@ -1,34 +1,34 @@
-# HTMLEllipsis 
+# EllipsisHTML 
 
 Mini tool to align HTML elements along an ellipse or a part of an ellipse. So you can arrange your HTML items along an
  ellipse easily without using canvas or any complex math functions. It's easy to use and high performance.
 
-**[😎😎 Online Demo](https://behnamazimi.github.io/html-ellipsis/)**
+**[😎😎 Online Demo](https://behnamazimi.github.io/ellipsis-html/)**
 
 ### Installation
 
 Using npm:
 ```
-npm install html-ellipsis
+npm install ellipsis-html
 ```
 
 Using yarn:
 ```
-npm install html-ellipsis
+npm install ellipsis-html
 ```
 
 Using unpkg CDN
 ```
-<script src="http://unpkg.com/html-ellipsis/lib/html-ellipsis.min.js"></script>
+<script src="http://unpkg.com/ellipsis-html/lib/ellipsis-html.min.js"></script>
 ```
 
 ### Usage
-After importing `html-ellipsis` to your project, you can call it like this,
+After importing `ellipsis-html` to your project, you can call it like this,
 ```javascript
-const myEllipsis = new HTMLEllipsis(htmlElement, options)
+const myEllipsis = new EllipsisHTML(htmlElement, options)
 ``` 
 
-There are two arguments that you should pass to the `HTMLEllipsis`:
+There are two arguments that you should pass to the `EllipsisHTML`:
 * **htmlElement:** the target element that you want to ellipse its child
 * **options:** properties to shape your ellipse. You can see all in below table. 
 
@@ -55,10 +55,10 @@ const options = {
     reflection: 1, // 0, 1, only in compact layout
     reverse: false
 }
-const htmlEllipsis = new HTMLEllipsis(elm, options)
+const EllipsisHTML = new EllipsisHTML(elm, options)
 
 // to update options and rerender the ellipse
-htmlEllipsis.update({size: 1})
+EllipsisHTML.update({size: 1})
 ``` 
 
 ### Sample Layouts

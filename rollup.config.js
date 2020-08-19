@@ -4,29 +4,29 @@ import pkg from './package.json';
 
 export default [
     {
-        input: 'src/html-ellipsis.js',
+        input: 'src/ellipsis-html.js',
         output: {
-            name: "HTMLEllipsis",
+            name: "EllipsisHTML",
             file: pkg.browser,
             format: 'umd',
         },
         plugins: [
             terser(),
             copy({
-                files: ['lib/html-ellipsis.min.js'],
+                files: ['lib/ellipsis-html.min.js'],
                 dest: 'demo',
             }),
         ]
     },
     {
-        input: 'src/html-ellipsis.js',
+        input: 'src/ellipsis-html.js',
         output: {
             file: pkg.main,
             format: 'cjs',
         }
     },
     {
-        input: 'src/html-ellipsis.js',
+        input: 'src/ellipsis-html.js',
         output: {
             file: pkg.module,
             format: 'es',
