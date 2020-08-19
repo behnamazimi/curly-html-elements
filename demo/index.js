@@ -5,7 +5,7 @@ let options = {
     type: "equal", // compact, equal
     size: .5, // 0, 1
     reflection: 1, // 0, 1, only in compact mode
-    rotate: 5, // 0, 360
+    rotateY: 5, // 0, 360
     reverse: false
 }
 
@@ -42,7 +42,7 @@ optionsForm.addEventListener("change", e => {
         options[e.target.name] = Number(value / 10)
         lblValElm.innerText = `(${value / 10})`
 
-    } else if (e.target.name === "rotate") {
+    } else if (e.target.name === "rotateY") {
         options[e.target.name] = Number(value)
         lblValElm.innerText = `(${value}deg)`
 
