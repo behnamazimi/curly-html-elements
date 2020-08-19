@@ -31,12 +31,14 @@ There are two arguments that you should pass to the `EllipseElements`:
 * **htmlElement:** the target element that you want to ellipse its child
 * **options:** properties to shape your ellipse. You can see all in below table. 
 
-Property | Default | Description
---- | --- | ----
-type | equal | layout type of the ellipse. there are two types, equal and compact. The distance between items in "equal" mode is equal. 
-size | 0.5 | size of ellipse. its a number between 0 and 1. if you want a entire ellipse it must be 1
-rotate | 0 | use this property to rotate ellipse. its a number between 0 and 360.  
-reflection | 1 | use this to mirroring the ellipse. its standard value is a number in range of [-1,+1] but you can set any numbers. for example, value 2 means two times height of the ellipse.   
+#### Options
+
+Property | Value | Default | Description
+--- | --- | --- | ---
+type | equal/compact | `equal` | Layout type of the ellipse. there are two types, equal and compact. The distance between items will be equal in "equal" mode. 
+size | [0, 1] | 0.5 | Size of ellipse. Its a number between 0 and 1. if you want a entire ellipse it must be 1.
+rotate | [0, 360] | 0 | Use this property to rotate ellipse. It could be a number between 0 and 360.  
+reflection | [-1, +1] | 1 | Use this to mirroring the ellipse. its standard value is a number in range of [-1,+1] but you can set any numbers. for example, value 2 means two times height for the ellipse.   
 
 #### Render with new options
 To update initial options you can use `.update(newOptions)` api. this method merges new options with the previous object 
