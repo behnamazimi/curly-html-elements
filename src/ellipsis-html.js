@@ -56,8 +56,8 @@ export default class EllipsisHTML {
         childItems.forEach((child, index) => {
             if (coordinates[index]) {
                 child.style.position = "absolute";
-                child.style.left = coordinates[index][0] + "px";
-                child.style.top = coordinates[index][1] + "px";
+                child.style.left = coordinates[index][0] - (child.clientWidth / 2) + "px";
+                child.style.top = coordinates[index][1] - (child.clientHeight / 2) + "px";
             }
         })
     }
