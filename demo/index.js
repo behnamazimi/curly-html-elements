@@ -5,8 +5,10 @@ let options = {
     type: "equal", // compact, equal
     size: .5, // 0, 1
     reflection: 1, // 0, 1, only in compact mode
-    rotateY: 5, // 0, 360
-    reverse: false
+    rotateY: 15, // 0, 360
+    reverse: false,
+    shiftY: 0,
+    shiftX: 0
 }
 
 createDots(15);
@@ -45,6 +47,10 @@ optionsForm.addEventListener("change", e => {
     } else if (e.target.name === "rotateY") {
         options[e.target.name] = Number(value)
         lblValElm.innerText = `(${value}deg)`
+
+    } else if (e.target.name === "shiftX" || e.target.name === "shiftY") {
+        options[e.target.name] = Number(value)
+        lblValElm.innerText = `(${value}px)`
 
     } else if (e.target.name === "reverse") {
         options[e.target.name] = e.target.checked;

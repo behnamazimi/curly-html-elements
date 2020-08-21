@@ -41,7 +41,6 @@
             color: #fff;
             background-color: #ea920d;
             box-shadow: 1px 1px 11px 3px rgba(0, 0, 0, .16);
-            transform: translate(-50%, -50%);
             display: inline-block;
         }
 
@@ -135,6 +134,16 @@
                 <label for="ellipseReflection">Reflection <span class="val">(1)</span></label>
                 <input type="range" class="form-control-range" id="ellipseReflection"
                        name="reflection" value="10" min="-10" max="10" step="1">
+            </div>
+            <div class="form-group">
+                <label for="ellipseShiftX">ShiftX <span class="val">(0)</span></label>
+                <input type="range" class="form-control-range" id="ellipseShiftX"
+                       name="shiftX" value="0" min="-500" max="500" step="2">
+            </div>
+            <div class="form-group">
+                <label for="ellipseShiftY">ShiftY <span class="val">(0)</span></label>
+                <input type="range" class="form-control-range" id="ellipseShiftY"
+                       name="shiftY" value="0" min="-500" max="500" step="2">
             </div>
             <div class="form-group d-flex align-items-center mb-3">
                 <div class="form-check form-check-inline">
