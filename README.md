@@ -23,7 +23,13 @@ Using unpkg CDN
 ```
 
 ### Usage
-After importing `ellipsis-html` to your project, you can call it like this,
+First, import `ellipsis-html` to your project. You can do it by adding the script tag that mentioned above, or you can
+ import it as a module like this.
+```javascript
+import EllipsisHTML from "ellipsis-html";
+``` 
+ 
+After adding the library to your project, you can call it like this.
 ```javascript
 const myEllipse = new EllipsisHTML(htmlElement, options)
 ``` 
