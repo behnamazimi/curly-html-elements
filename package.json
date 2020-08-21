@@ -1,6 +1,6 @@
 {
   "name": "ellipsis-html",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Mini tool to align HTML elements along an ellipse or a part of an ellipse",
   "main": "lib/ellipsis-html.cjs.js",
   "module": "lib/ellipsis-html.esm.js",
