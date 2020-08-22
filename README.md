@@ -16,7 +16,7 @@ npm install ellipsis-html
 
 Using yarn:
 ```
-yarn add ellipsis-html
+yarn add ellipsis-html  
 ```
 
 Using unpkg CDN
