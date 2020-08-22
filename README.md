@@ -1,7 +1,9 @@
 # Ellipsis HTML Elements
 
-Mini tool to align HTML elements along an ellipse or a part of an ellipse. So you can arrange your HTML items along an
- ellipse easily without using canvas or any complex math functions.
+Mini tool to arranging HTML elements along ellipse subset shapes. Using ellipsis-html you can layout child items of an 
+element along a circle, semicircle, ellipse or any subset shape of it without encounter math formula and complex concepts.
+
+It’s only 2KB and easy to use.
 
 **😎😎 [Online Demo](https://behnamazimi.github.io/ellipsis-html/)**
 
@@ -48,6 +50,8 @@ rotate | [0, 360] | 0 | Use this property to rotate ellipse. It could be a numbe
 reflection | [-1, +1] | 1 | Use this to mirroring the ellipse. its standard value is a number in range of [-1,+1] but you can set any numbers. for example, value 2 means two times height for the ellipse.   
 shiftX | number | 0 | To shift whole layout to **right** or **left**. The value could be both positive and negative.
 shiftY | number | 0 | To shift whole layout to **up** or **down**. The value could be both positive and negative.   
+
+You can arrange your elements in any subset shape of an ellipse and put it in any position of your parent element with changing the options.
 
 #### Render with new options
 To update initial options you can use `.update(newOptions)` API. this method merges new options with the previous object 
