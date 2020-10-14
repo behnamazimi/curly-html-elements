@@ -14,7 +14,7 @@ let options = {
 createDots(15);
 generateDemoCode(options)
 
-const alongEllipse = new EllipsisHTML(rect, options)
+const alongEllipse = new CurlyElements(rect, options)
 
 optionsForm.addEventListener("change", e => {
     const value = e.target.value;
@@ -64,7 +64,7 @@ function generateDemoCode(options) {
     const demoCode =
         `const elm = document.getElementById("demo");
 const options = ${JSON.stringify(options, null, 4)}
-const htmlArc = new EllipsisHTML(elm, options)`;
+const htmlArc = new CurlyElements(elm, options)`;
 
     const codeElm = document.getElementById("demo-code");
     codeElm.innerText = demoCode;

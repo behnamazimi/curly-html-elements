@@ -1,19 +1,19 @@
 {
-  "name": "ellipsis-html",
+  "name": "curly-html-elements",
   "version": "1.1.3",
   "description": "Mini tool to align HTML elements along an ellipse or a part of an ellipse",
-  "main": "lib/ellipsis-html.cjs.js",
-  "module": "lib/ellipsis-html.esm.js",
-  "browser": "lib/ellipsis-html.min.js",
+  "main": "lib/curly-html-elements.cjs.js",
+  "module": "lib/curly-html-elements.esm.js",
+  "browser": "lib/curly-html-elements.min.js",
   "license": "MIT",
   "author": "Behnam Azimi",
-  "homepage": "https://github.com/behnamazimi/ellipsis-html",
+  "homepage": "https://github.com/behnamazimi/curly-html-elements",
   "repository": {
     "type": "git",
-    "url": "https://github.com/behnamazimi/ellipsis-html.git"
+    "url": "https://github.com/behnamazimi/curly-html-elements.git"
   },
   "bugs": {
-    "url": "https://github.com/behnamazimi/ellipsis-html/issues"
+    "url": "https://github.com/behnamazimi/curly-html-elements/issues"
   },
   "scripts": {
     "dev": "rollup -c rollup.config.dev.js -w",
@@ -24,6 +24,7 @@
     "elements along ellipse",
     "align elements curve",
     "curve elements",
+    "curly elements",
     "ellipse",
     "html"
   ],

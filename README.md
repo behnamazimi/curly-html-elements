@@ -1,42 +1,42 @@
-# Ellipsis HTML Elements
+# Curly HTML Elements
 
-Mini tool to arranging HTML elements along ellipse subset shapes. Using ellipsis-html you can layout child items of an 
+Mini tool to arranging HTML elements along ellipse subset shapes. Using curly-html-elements you can layout child items of an 
 element along a circle, semicircle, ellipse or any subset shape of it without encounter math formula and complex concepts.
 
 It’s only 2KB and easy to use.
 
-**😎😎 [Online Demo](https://behnamazimi.github.io/ellipsis-html/)**
+**😎😎 [Online Demo](https://behnamazimi.github.io/curly-html-elements/)**
 
 ### Installation
 
 Using npm:
 ```
-npm install ellipsis-html
+npm install curly-html-elements
 ```
 
 Using yarn:
 ```
-yarn add ellipsis-html  
+yarn add curly-html-elements  
 ```
 
 Using unpkg CDN
 ```
-<script src="http://unpkg.com/ellipsis-html/lib/ellipsis-html.min.js"></script>
+<script src="http://unpkg.com/curly-html-elements/lib/curly-html-elements.min.js"></script>
 ```
 
 ### Usage
-First, import `ellipsis-html` to your project. You can do it by adding the script tag that mentioned above, or you can
+First, import `curly-html-elements` to your project. You can do it by adding the script tag that mentioned above, or you can
  import it as a module like this.
 ```javascript
-import EllipsisHTML from "ellipsis-html";
+import CurlyElements from "curly-html-elements";
 ``` 
  
 After adding the library to your project, you can call it like this.
 ```javascript
-const myEllipse = new EllipsisHTML(htmlElement, options)
+const myEllipse = new CurlyElements(htmlElement, options)
 ``` 
 
-There are two arguments that you should pass to the `EllipsisHTML`:
+There are two arguments that you should pass to the `CurlyElements`:
 * **htmlElement:** the target element that you want to ellipse its child
 * **options:** properties to shape your ellipse. You can see all in below table. 
 
@@ -69,7 +69,7 @@ const options = {
     shiftX: 0,      // any number
     shiftY: 0,      // any number
 }
-const myEllipse = new EllipsisHTML(elm, options)
+const myEllipse = new CurlyElements(elm, options)
 
 // to update options and rerender the ellipse
 myEllipse.update({type: "compact", size: 1})
@@ -80,8 +80,8 @@ myEllipse.update({type: "compact", size: 1})
 
 ### Contributing
 I would be grateful to those who helped me make the project truly perfect. So, feel free to contribute to the project. 
-Also, if you encounter any problem bring it up as an [issue](https://github.com/behnamazimi/ellipsis-html/issues/new).  
+Also, if you encounter any problem bring it up as an [issue](https://github.com/behnamazimi/curly-html-elements/issues/new).  
 
 ### License
 
-[MIT](https://github.com/behnamazimi/ellipsis-html/blob/master/LICENSE)
+[MIT](https://github.com/behnamazimi/curly-html-elements/blob/master/LICENSE)

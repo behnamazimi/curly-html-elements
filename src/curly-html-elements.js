@@ -1,6 +1,6 @@
-class EllipsisHTML {
+export default class CurlyElements {
     constructor(element, options = {}) {
-        this.require(element instanceof HTMLElement, "Invalid target element.");
+        this.require(element instanceof HTMLElement, "Invalid target element.")
 
         this.target = element;
 
@@ -12,7 +12,7 @@ class EllipsisHTML {
             reverse: false,
             shiftX: 0,
             shiftY: 0,
-        };
+        }
 
         if (options && typeof options === "object")
             this._options = {...this._options, ...options};
@@ -32,7 +32,7 @@ class EllipsisHTML {
     }
 
     _initListeners() {
-        window.addEventListener("resize", this.render.bind(this));
+        window.addEventListener("resize", this.render.bind(this))
     }
 
     render() {
@@ -41,17 +41,17 @@ class EllipsisHTML {
         const targetBound = this.target.getBoundingClientRect();
         const childItems = this.target.querySelectorAll(":scope > *");
 
-        const coordFnArgs = [childItems.length, targetBound.width / 2, targetBound.height, targetBound.width / 2, targetBound.height];
+        const coordFnArgs = [childItems.length, targetBound.width / 2, targetBound.height, targetBound.width / 2, targetBound.height]
         let coordinates = [];
 
         if (this._options.type === "equal") {
-            coordinates = this.equalCoordinates.apply(this, coordFnArgs);
+            coordinates = this.equalCoordinates.apply(this, coordFnArgs)
         } else {
-            coordinates = this.compactCoordinates.apply(this, coordFnArgs);
+            coordinates = this.compactCoordinates.apply(this, coordFnArgs)
         }
 
         if (this._options.reverse) {
-            coordinates.reverse();
+            coordinates.reverse()
         }
 
         childItems.forEach((child, index) => {
@@ -63,12 +63,12 @@ class EllipsisHTML {
                 child.style.left = left + "px";
                 child.style.top = top + "px";
             }
-        });
+        })
     }
 
     compactCoordinates(n, r1, r2, centerX, centerY) {
 
-        const options = this._options;
+        const options = this._options
 
         const size = 2 * options.size;
         const rotateY = (Math.PI / 2 * (options.rotateY * 4 / 360)) + Math.PI;
@@ -76,31 +76,31 @@ class EllipsisHTML {
         // reflection arc
         r2 = r2 * options.reflection;
 
-        let coordinates = [];
+        let coordinates = []
         for (let i = 0; i < n; i++) {
             const t = (Math.PI * i / n * size) + rotateY;
             let nx = centerX + r1 * Math.cos(t);
             let ny = centerY + r2 * Math.sin(t);
-            coordinates.push([nx, ny]);
+            coordinates.push([nx, ny])
         }
 
         return coordinates
     }
 
     _computeDpt(r1, r2, theta, rotateY = 0) {
-        const dpt_sin = Math.pow(r1 * Math.sin(theta + rotateY), 2);
-        const dpt_cos = Math.pow(r2 * Math.cos(theta + rotateY), 2);
+        const dpt_sin = Math.pow(r1 * Math.sin(theta + rotateY), 2)
+        const dpt_cos = Math.pow(r2 * Math.cos(theta + rotateY), 2)
         return Math.sqrt(dpt_sin + dpt_cos)
     }
 
     equalCoordinates(n, r1, r2, centerX, centerY) {
 
         // type options
-        const options = this._options;
+        const options = this._options
 
         let reflection = -(options.reflection);
 
-        let deltaTheta = 0.001;
+        let deltaTheta = 0.001
 
         let coordinates = [];
         let theta = 0;
@@ -145,5 +145,3 @@ class EllipsisHTML {
         this.render();
     }
 }
-
-export default EllipsisHTML;

@@ -4,15 +4,15 @@ import pkg from './package.json';
 
 export default [
     {
-        input: 'src/ellipsis-html.js',
+        input: 'src/curly-html-elements.js',
         output: {
-            name: "EllipsisHTML",
+            name: "CurlyElements",
             file: pkg.browser,
             format: 'umd',
         },
         plugins: [
             copy({
-                files: ['lib/ellipsis-html.min.js'],
+                files: ['lib/curly-html-elements.min.js'],
                 dest: 'demo',
             }),
             browsersync({
